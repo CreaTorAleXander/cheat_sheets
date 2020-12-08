@@ -17,3 +17,15 @@ console.log(elements.join(''));
 console.log(elements.join('-'));
 // expected output: "Fire-Air-Water"
 ```
+
+#### How to use reduce 
+```
+const result = Object.values(products).reduce((a, c) => {
+    for (const key in c) {
+    // entweder der Wert oder neues Array
+       a[key] = a[key] || [];
+       a[key].push(c[key]);
+    }
+    return a;
+},{});
+```
