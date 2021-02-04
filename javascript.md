@@ -44,3 +44,6 @@ Promise.all([promise1, promise2, promise3]).then((values) => {
 // expected output: Array [3, 42, "foo"]
 
 ```
+
+#### Make an Object Immutable
+`Object.freeze(Obj)`
