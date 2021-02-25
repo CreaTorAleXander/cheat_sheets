@@ -50,6 +50,26 @@ app.listen(8080);
 
 ```
 
+#### Middleware
+
+Middleware is those methods/functions/opeartions that are called between processing the request and sending the response in your application method.
+
+##### <code>express.json()</code> & <code>express.urlencoded</code>
+
+When talking about these we specificially think about POST requests or PUT Request
+
+##### Why do we need them?
+
+When you receive POST and PUT requests on your backend in both you receive data from a form for example. Now the server is asked to accept or store that data (object), which is enclosed in the body of that Request. 
+
+<code>express.json()</code> is a method inbuilt in express to recognize the incoming Request Object as a JSON Object.
+<code>express.urlencoded()</code> is a method inbuilt in express to recognize the incoming Request Object as strings or arrays
+
+With these you can now limit what kind of request you can parse.
+
+For example:
+
+express.json({limit: '1mb}) only allows payload up to 1mb.
 
 Middleware name meaning is good to explain with the example below.
 The first two defined route handler are called as middleware because they are not handling the request rather for pre-processing of the request.
